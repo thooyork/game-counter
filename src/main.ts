@@ -12,24 +12,25 @@ setupBuzzer(document.querySelector<HTMLDivElement>('#buzzer')!, document.querySe
 
 let wakelock: any;
 
-function releaseWakeState() {
-  if(wakelock) wakelock.release();
-  wakelock = null;
-}
+// future use maybe
+// function releaseWakeState() {
+//   if(wakelock) wakelock.release();
+//   wakelock = null;
+// }
 
 const canWakeLock = () => 'wakeLock' in navigator;
 
 async function lockWakeState() {
-  if(!canWakeLock()) return;
+  if (!canWakeLock()) return;
   try {
     wakelock = await navigator.wakeLock.request();
     wakelock.addEventListener('release', () => {
       console.log('Screen Wake State Locked:', !wakelock.released);
     });
     console.log('Screen Wake State Locked:', !wakelock.released);
-  } catch(e) {
+  } catch (e: any) {
     console.error('Failed to lock wake state with reason:', e.message);
   }
 }
 
-await lockWakeState();
+lockWakeState();
