@@ -7,6 +7,9 @@ html, body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
   font-weight: 100;
+  background-image: url('./background.png');
+  background-size: cover;
+  background-position: center center;
 }
 
 #app {
@@ -42,9 +45,9 @@ html, body {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333;
   padding: 10px 10px;
   color:#EFEFEF;
-  font-size: 3vw;
+  font-size: 7vw;
+  font-weight: 700;
   user-select: none; /* standard syntax */
 }
