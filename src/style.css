@@ -28,10 +28,23 @@ html, body {
   aspect-ratio: 1 / 1;
   cursor: pointer;
   border-radius: 50%;
-  font-size: 20vw;
-
+  font-size: 25vw;
+  color:#333333;
+  user-select: none; /* standard syntax */
   span {
-    font-size: 10vw;
+    font-size: 15vw;
     transform: translate(0, 38%);
   }
+}
+
+.reset {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  padding: 10px 10px;
+  color:#EFEFEF;
+  font-size: 3vw;
+  user-select: none; /* standard syntax */
 }
